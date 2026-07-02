@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,13 +10,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Montserrat:wght@600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Montserrat:wght@600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
 <style>
-
-html{
-    scroll-behavior:smooth;
-}
 
 @font-face{
     font-family:'Chopsic';
@@ -27,13 +26,15 @@ html{
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#0d0d0d;
     color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
 }
-
-/* HERO */
 
 .container{
     min-height:100vh;
@@ -46,143 +47,180 @@ body{
 }
 
 h1{
-    font-family:'Chopsic', sans-serif;
+    font-family:'Chopsic',sans-serif;
     font-size:42px;
     letter-spacing:6px;
     color:#D4AF37;
-    margin-bottom:15px;
-}
-
-.gold-line{
-    width:80%;
-    max-width:220px;
-    height:2px;
-    margin:0 auto 30px;
-    background:linear-gradient(90deg,#b8860b,#FFD700,#FFF2A8,#FFD700,#b8860b);
-    border-radius:2px;
-    opacity:0;
-    animation:goldBeam 2.8s ease forwards;
-}
-
-@keyframes goldBeam{
-
-0%{
-    opacity:0;
-}
-
-15%{
-    opacity:1;
-}
-
-40%{
-    opacity:1;
-    box-shadow:
-        0 0 12px rgba(255,215,0,.95),
-        0 0 28px rgba(255,215,0,.9),
-        0 0 55px rgba(255,242,168,.8);
-}
-
-65%{
-    opacity:1;
-    box-shadow:
-        0 0 18px rgba(255,215,0,.8),
-        0 0 40px rgba(255,242,168,.7);
-}
-
-100%{
-    opacity:0;
-    box-shadow:none;
-}
+    margin-bottom:20px;
 }
 
 h2{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
+    font-family:'Cormorant Garamond',serif;
     font-size:30px;
     font-weight:500;
     color:#fff;
+    margin-bottom:20px;
+}
+
+p{
+    font-family:'Playfair Display',serif;
+    font-size:18px;
+    color:#cfcfcf;
+    margin-bottom:45px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 42px;
+
+    font-family:'Montserrat',sans-serif;
+
+    color:#D4AF37;
+
+    border:1.5px solid #D4AF37;
+
+    text-decoration:none;
+
+    border-radius:6px;
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    background:#D4AF37;
+
+    color:#000;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 15px rgba(212,175,55,.35);
+
+}
+
+@media(max-width:768px){
+
+h1{
+
+font-size:34px;
+
+letter-spacing:4px;
+
+}
+
+h2{
+
+font-size:24px;
+
+}
+
+p{
+
+font-size:16px;
+
+}
+
+.btn{
+
+padding:14px 34px;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SOHEB_.X | Jewelry CAD Artist</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Montserrat:wght@600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+@font-face{
+    font-family:'Chopsic';
+    src:url('Chopsic.otf') format('opentype');
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d0d0d;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+.container{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-family:'Chopsic',sans-serif;
+    font-size:42px;
+    letter-spacing:6px;
+    color:#D4AF37;
+    margin-bottom:18px;
+}
+
+h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    font-weight:500;
     margin-bottom:18px;
 }
 
 p{
-    font-family:'Playfair Display', serif;
+    font-family:'Playfair Display',serif;
     font-size:18px;
     color:#cfcfcf;
-    letter-spacing:1px;
     margin-bottom:45px;
 }
 
-button{
-    font-family:'Montserrat', sans-serif;
-    font-size:16px;
-    font-weight:600;
-    color:#D4AF37;
-    background:transparent;
-    border:1.5px solid #D4AF37;
-    border-radius:6px;
+.btn{
+    display:inline-block;
     padding:15px 42px;
-    cursor:pointer;
+    border:1.5px solid #D4AF37;
+    color:#D4AF37;
+    text-decoration:none;
+    border-radius:6px;
+    font-family:'Montserrat',sans-serif;
     transition:.35s;
 }
 
-button:hover{
+.btn:hover{
     background:#D4AF37;
     color:#000;
     transform:translateY(-2px);
     box-shadow:0 0 15px rgba(212,175,55,.35);
 }
 
-/* PORTFOLIO */
-
-#portfolio{
-    background:#111;
-    padding:100px 8%;
-    min-height:100vh;
-    text-align:center;
-}
-
-#portfolio h2{
-    color:#D4AF37;
-    margin-bottom:50px;
-    font-size:36px;
-    font-style:normal;
-}
-
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    height:280px;
-    border:1px solid rgba(212,175,55,.3);
-    border-radius:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#D4AF37;
-    font-size:22px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#D4AF37;
-    box-shadow:0 0 20px rgba(212,175,55,.3);
-}
-
-/* MOBILE */
-
 @media(max-width:768px){
 
 h1{
     font-size:34px;
     letter-spacing:4px;
-}
-
-.gold-line{
-    width:140px;
 }
 
 h2{
@@ -193,11 +231,166 @@ p{
     font-size:16px;
 }
 
-button{
-    width:100%;
-    max-width:260px;
+.btn{
+    padding:14px 34px;
 }
 
+}
+
+</style>
+
+</head>
+}
+
+</style>
+    <body>
+
+<section class="container">
+
+    <h1>SOHEB_.X</h1>
+
+    <h2>Jewelry CAD Artist</h2>
+
+    <p>From Vision To Reality</p>
+
+    <a href="portfolio.html" class="btn">
+        Explore Portfolio
+    </a>
+
+</section>
+
+</body>
+
+</html>
+/* ---------- LOGO ANIMATION ---------- */
+
+.container{
+    animation:fadeIn 1.2s ease;
+}
+
+h1{
+    animation:logoGlow 2.5s ease;
+}
+
+h2{
+    animation:fadeText 2s ease;
+}
+
+p{
+    animation:fadeText 2.5s ease;
+}
+
+.btn{
+    animation:fadeButton 3s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes logoGlow{
+
+0%{
+    opacity:0;
+    text-shadow:none;
+}
+
+50%{
+    opacity:1;
+    text-shadow:
+        0 0 8px rgba(255,215,0,.8),
+        0 0 18px rgba(255,215,0,.5);
+}
+
+100%{
+    opacity:1;
+    text-shadow:none;
+}
+
+}
+
+@keyframes fadeText{
+
+0%{
+    opacity:0;
+    transform:translateY(15px);
+}
+
+100%{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+@keyframes fadeButton{
+
+0%{
+    opacity:0;
+}
+
+100%{
+    opacity:1;
+}
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | SOHEB_.X</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0d0d0d;
+color:white;
+font-family:Arial,Helvetica,sans-serif;
+padding:50px 8%;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:42px;
+color:#D4AF37;
+text-align:center;
+margin-bottom:50px;
+}
+
+.back{
+display:inline-block;
+margin-bottom:40px;
+text-decoration:none;
+color:#D4AF37;
+border:1px solid #D4AF37;
+padding:12px 28px;
+border-radius:6px;
+transition:.3s;
+}
+
+.back:hover{
+background:#D4AF37;
+color:#000;
 }
 
 </style>
@@ -206,40 +399,10 @@ button{
 
 <body>
 
-<div class="container">
+<a href="index.html" class="back">← Back Home</a>
 
-<h1>SOHEB_.X</h1>
-
-<div class="gold-line"></div>
-
-<h2>Jewelry CAD Artist</h2>
-
-<p>From Vision To Reality</p>
-
-<button onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
-    Explore Portfolio
-</button>
-
-</div>
-
-<section id="portfolio">
-
-    <h2>FEATURED WORK</h2>
-
-    <div class="portfolio-grid">
-
-        <div class="card">Ring</div>
-        <div class="card">Pendant</div>
-
-        <div class="card">Bracelet</div>
-        <div class="card">Earrings</div>
-
-        <div class="card">Name Pendant</div>
-        <div class="card">Custom Design</div>
-
-    </div>
-
-</section>
+<h1>Portfolio</h1>
 
 </body>
+
 </html>
