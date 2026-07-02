@@ -64,7 +64,10 @@ p{
     margin-bottom:45px;
 }
 
-button{
+.btn{
+display:inline-block;
+text-decoration:none;
+
     font-family:'Montserrat', sans-serif;
     font-size:16px;
     font-weight:600;
@@ -77,12 +80,20 @@ button{
     transition:all .4s ease;
 }
 
-button:hover{
+.btn:hover{
     background:#D4AF37;
     color:#000;
     transform:translateY(-3px);
     box-shadow:0 0 20px rgba(212,175,55,.35);
 }
+
+
+/* Diamond */
+.container{position:relative;}
+.diamond-glow{position:absolute;top:-120px;left:50%;transform:translateX(-50%) rotate(45deg);width:90px;height:90px;border:2px solid #D4AF37;animation:diamondGlow 3s ease-in-out infinite;}
+.diamond-glow::after{content:"";position:absolute;left:-60px;top:43px;width:210px;height:2px;background:linear-gradient(90deg,transparent,#FFD700,transparent);transform:rotate(-45deg);opacity:0;animation:shine 3s infinite;}
+@keyframes diamondGlow{50%{box-shadow:0 0 18px rgba(255,215,0,.8),0 0 40px rgba(255,215,0,.4);}}
+@keyframes shine{45%{opacity:0}50%{opacity:1}55%{opacity:1}100%{opacity:0}}
 
 </style>
 
@@ -91,6 +102,7 @@ button:hover{
 <body>
 
 <div class="container">
+    <div class="diamond-glow"></div>
 
     <h1>SOHEB_.X</h1>
 
@@ -98,7 +110,7 @@ button:hover{
 
     <p>From Vision To Reality</p>
 
-    <button>Explore Portfolio</button>
+    <a href="portfolio.html" class="btn">Explore Portfolio</a>
 
 </div>
 
