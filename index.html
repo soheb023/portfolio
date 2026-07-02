@@ -12,6 +12,10 @@
 
 <style>
 
+html{
+    scroll-behavior:smooth;
+}
+
 @font-face{
     font-family:'Chopsic';
     src:url('Chopsic.otf') format('opentype');
@@ -26,17 +30,19 @@
 body{
     background:#0d0d0d;
     color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    text-align:center;
     font-family:Arial, Helvetica, sans-serif;
-    padding:20px;
 }
 
+/* HERO */
+
 .container{
-    max-width:800px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
 h1{
@@ -46,8 +52,6 @@ h1{
     color:#D4AF37;
     margin-bottom:15px;
 }
-
-/* GOLD LINE */
 
 .gold-line{
     width:80%;
@@ -64,11 +68,6 @@ h1{
 
 0%{
     opacity:0;
-    transform:scaleX(1);
-    filter:brightness(1);
-    box-shadow:
-        0 0 0 rgba(255,215,0,0),
-        0 0 0 rgba(255,242,168,0);
 }
 
 15%{
@@ -77,17 +76,14 @@ h1{
 
 40%{
     opacity:1;
-    filter:brightness(2.5);
     box-shadow:
         0 0 12px rgba(255,215,0,.95),
         0 0 28px rgba(255,215,0,.9),
-        0 0 55px rgba(255,242,168,.8),
-        0 0 90px rgba(255,242,168,.5);
+        0 0 55px rgba(255,242,168,.8);
 }
 
 65%{
     opacity:1;
-    filter:brightness(2);
     box-shadow:
         0 0 18px rgba(255,215,0,.8),
         0 0 40px rgba(255,242,168,.7);
@@ -95,10 +91,19 @@ h1{
 
 100%{
     opacity:0;
-    filter:brightness(1);
     box-shadow:none;
 }
 }
+
+h2{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:30px;
+    font-weight:500;
+    color:#fff;
+    margin-bottom:18px;
+}
+
 p{
     font-family:'Playfair Display', serif;
     font-size:18px;
@@ -126,6 +131,48 @@ button:hover{
     transform:translateY(-2px);
     box-shadow:0 0 15px rgba(212,175,55,.35);
 }
+
+/* PORTFOLIO */
+
+#portfolio{
+    background:#111;
+    padding:100px 8%;
+    min-height:100vh;
+    text-align:center;
+}
+
+#portfolio h2{
+    color:#D4AF37;
+    margin-bottom:50px;
+    font-size:36px;
+    font-style:normal;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    height:280px;
+    border:1px solid rgba(212,175,55,.3);
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#D4AF37;
+    font-size:22px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#D4AF37;
+    box-shadow:0 0 20px rgba(212,175,55,.3);
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -169,9 +216,30 @@ button{
 
 <p>From Vision To Reality</p>
 
-<button>Explore Portfolio</button>
+<button onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">
+    Explore Portfolio
+</button>
 
 </div>
+
+<section id="portfolio">
+
+    <h2>FEATURED WORK</h2>
+
+    <div class="portfolio-grid">
+
+        <div class="card">Ring</div>
+        <div class="card">Pendant</div>
+
+        <div class="card">Bracelet</div>
+        <div class="card">Earrings</div>
+
+        <div class="card">Name Pendant</div>
+        <div class="card">Custom Design</div>
+
+    </div>
+
+</section>
 
 </body>
 </html>
