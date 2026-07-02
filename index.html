@@ -25,7 +25,7 @@
 
 body{
     background:#0d0d0d;
-    color:#fff;
+    color:#ffffff;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -44,7 +44,42 @@ h1{
     font-size:42px;
     letter-spacing:6px;
     color:#D4AF37;
-    margin-bottom:18px;
+    margin-bottom:15px;
+}
+
+.gold-line{
+    width:180px;
+    height:2px;
+    margin:0 auto 30px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #D4AF37,
+        #FFE27A,
+        #D4AF37,
+        transparent
+    );
+    background-size:200% 100%;
+    animation:goldGlow 2.5s ease-in-out;
+    box-shadow:0 0 8px rgba(212,175,55,.45);
+}
+
+@keyframes goldGlow{
+
+0%{
+    background-position:200% 0;
+    opacity:0;
+}
+
+20%{
+    opacity:1;
+}
+
+100%{
+    background-position:-200% 0;
+    opacity:1;
+}
+
 }
 
 h2{
@@ -91,6 +126,10 @@ h1{
     letter-spacing:4px;
 }
 
+.gold-line{
+    width:140px;
+}
+
 h2{
     font-size:24px;
 }
@@ -115,6 +154,8 @@ button{
 <div class="container">
 
 <h1>SOHEB_.X</h1>
+
+<div class="gold-line"></div>
 
 <h2>Jewelry CAD Artist</h2>
 
