@@ -64,10 +64,7 @@ p{
     margin-bottom:45px;
 }
 
-.btn{
-display:inline-block;
-text-decoration:none;
-
+button{
     font-family:'Montserrat', sans-serif;
     font-size:16px;
     font-weight:600;
@@ -80,7 +77,7 @@ text-decoration:none;
     transition:all .4s ease;
 }
 
-.btn:hover{
+button:hover{
     background:#D4AF37;
     color:#000;
     transform:translateY(-3px);
@@ -88,12 +85,9 @@ text-decoration:none;
 }
 
 
-/* Diamond */
-.container{position:relative;}
-.diamond-glow{position:absolute;top:-120px;left:50%;transform:translateX(-50%) rotate(45deg);width:90px;height:90px;border:2px solid #D4AF37;animation:diamondGlow 3s ease-in-out infinite;}
-.diamond-glow::after{content:"";position:absolute;left:-60px;top:43px;width:210px;height:2px;background:linear-gradient(90deg,transparent,#FFD700,transparent);transform:rotate(-45deg);opacity:0;animation:shine 3s infinite;}
-@keyframes diamondGlow{50%{box-shadow:0 0 18px rgba(255,215,0,.8),0 0 40px rgba(255,215,0,.4);}}
-@keyframes shine{45%{opacity:0}50%{opacity:1}55%{opacity:1}100%{opacity:0}}
+.logo-box{width:120px;height:120px;margin:0 auto 30px;display:flex;justify-content:center;align-items:center;transform:rotate(45deg);border:2px solid #D4AF37;box-shadow:0 0 20px rgba(212,175,55,.5);animation:g 2.5s infinite}
+.logo-box img{width:95px;transform:rotate(-45deg);filter:drop-shadow(0 0 10px rgba(212,175,55,.8))}
+@keyframes g{50%{box-shadow:0 0 35px rgba(255,215,0,.9)}}
 
 </style>
 
@@ -102,7 +96,7 @@ text-decoration:none;
 <body>
 
 <div class="container">
-    <div class="diamond-glow"></div>
+<div class="logo-box"><img src="logo_transparent.png" alt="logo"></div>
 
     <h1>SOHEB_.X</h1>
 
@@ -110,7 +104,7 @@ text-decoration:none;
 
     <p>From Vision To Reality</p>
 
-    <a href="portfolio.html" class="btn">Explore Portfolio</a>
+    <button>Explore Portfolio</button>
 
 </div>
 
