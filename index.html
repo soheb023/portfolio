@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SOHEB_.X | Jewelry CAD Artist</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,37 +29,48 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh;
     text-align:center;
     font-family:Arial, Helvetica, sans-serif;
+    padding:20px;
+}
+
+.container{
+    max-width:700px;
 }
 
 h1{
     font-family:'Chopsic', sans-serif;
-    font-size:60px;
+    font-size:clamp(42px,8vw,72px);
     letter-spacing:4px;
     color:#D4AF37;
     margin-bottom:20px;
 }
 
 h2{
-    font-size:28px;
-    font-weight:300;
-    margin-bottom:20px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:clamp(28px,4vw,42px);
+    font-weight:500;
+    margin-bottom:15px;
+    color:white;
 }
 
 p{
-    font-size:18px;
-    color:#cccccc;
+    font-family:'Playfair Display', serif;
+    font-size:clamp(18px,2.5vw,24px);
+    color:#d8d8d8;
     margin-bottom:40px;
 }
 
 button{
-    padding:15px 40px;
+    font-family:'Montserrat', sans-serif;
+    padding:16px 42px;
     border:2px solid #D4AF37;
     background:transparent;
     color:#D4AF37;
-    font-size:16px;
+    font-size:18px;
+    font-weight:600;
     cursor:pointer;
     transition:0.3s;
 }
@@ -74,11 +86,16 @@ button:hover{
 
 <body>
 
-<div>
-    <h1>SOHEB_.X</h1>
-    <h2>Jewelry CAD Artist</h2>
-    <p>From Vision To Reality</p>
-    <button>Explore Portfolio</button>
+<div class="container">
+
+<h1>SOHEB_.X</h1>
+
+<h2>Jewelry CAD Artist</h2>
+
+<p>From Vision To Reality</p>
+
+<button>Explore Portfolio</button>
+
 </div>
 
 </body>
