@@ -25,7 +25,7 @@
 
 body{
     background:#0d0d0d;
-    color:#ffffff;
+    color:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -47,37 +47,43 @@ h1{
     margin-bottom:15px;
 }
 
+/* GOLD LINE */
+
 .gold-line{
     width:180px;
     height:2px;
     margin:0 auto 30px;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #D4AF37,
-        #FFE27A,
-        #D4AF37,
-        transparent
-    );
-    background-size:200% 100%;
-    animation:goldGlow 2.5s ease-in-out;
-    box-shadow:0 0 8px rgba(212,175,55,.45);
+    background:#D4AF37;
+    opacity:0;
+    transform:scaleX(0);
+    transform-origin:center;
+    animation:goldReveal 3s ease forwards;
 }
 
-@keyframes goldGlow{
+@keyframes goldReveal{
 
 0%{
-    background-position:200% 0;
     opacity:0;
+    transform:scaleX(0);
+    box-shadow:0 0 0 rgba(212,175,55,0);
 }
 
-20%{
+35%{
     opacity:1;
+    transform:scaleX(1);
+    box-shadow:0 0 25px rgba(212,175,55,.95);
+}
+
+65%{
+    opacity:1;
+    transform:scaleX(1);
+    box-shadow:0 0 35px rgba(255,226,122,1);
 }
 
 100%{
-    background-position:-200% 0;
-    opacity:1;
+    opacity:.45;
+    transform:scaleX(1);
+    box-shadow:0 0 4px rgba(212,175,55,.2);
 }
 
 }
@@ -87,7 +93,7 @@ h2{
     font-style:italic;
     font-size:30px;
     font-weight:500;
-    color:#ffffff;
+    color:#fff;
     margin-bottom:18px;
 }
 
@@ -109,7 +115,7 @@ button{
     border-radius:6px;
     padding:15px 42px;
     cursor:pointer;
-    transition:all .35s ease;
+    transition:.35s;
 }
 
 button:hover{
@@ -119,7 +125,7 @@ button:hover{
     box-shadow:0 0 15px rgba(212,175,55,.35);
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
 h1{
     font-size:34px;
