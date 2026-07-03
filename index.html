@@ -8,6 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Montserrat:wght@600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
 <style>
@@ -84,10 +85,34 @@ button:hover{
     box-shadow:0 0 20px rgba(212,175,55,.35);
 }
 
+.logo-box{
+    width:120px;
+    height:120px;
+    margin:0 auto 30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:rotate(45deg);
+    border:2px solid #D4AF37;
+    box-shadow:0 0 20px rgba(212,175,55,.5);
+    animation:g 2.5s infinite;
+}
 
-.logo-box{width:120px;height:120px;margin:0 auto 30px;display:flex;justify-content:center;align-items:center;transform:rotate(45deg);border:2px solid #D4AF37;box-shadow:0 0 20px rgba(212,175,55,.5);animation:g 2.5s infinite}
-.logo-box img{width:95px;transform:rotate(-45deg);filter:drop-shadow(0 0 10px rgba(212,175,55,.8))}
-@keyframes g{50%{box-shadow:0 0 35px rgba(255,215,0,.9)}}
+.logo-box img{
+    width:95px;
+    transform:rotate(-45deg);
+    filter:drop-shadow(0 0 10px rgba(212,175,55,.8));
+}
+
+@keyframes g{
+    50%{
+        box-shadow:0 0 35px rgba(255,215,0,.9);
+    }
+}
+
+a{
+    text-decoration:none;
+}
 
 </style>
 
@@ -96,7 +121,10 @@ button:hover{
 <body>
 
 <div class="container">
-<div class="logo-box"><img src="logo_transparent.png" alt="logo"></div>
+
+    <div class="logo-box">
+        <img src="logo_transparent.png" alt="logo">
+    </div>
 
     <h1>SOHEB_.X</h1>
 
@@ -104,11 +132,11 @@ button:hover{
 
     <p>From Vision To Reality</p>
 
-    <button>Explore Portfolio</button>
+    <a href="portfolio.html">
+        <button>Explore Portfolio</button>
+    </a>
 
 </div>
 
 </body>
 </html>
-
-<a href="portfolio.html" class="btn">Explore Portfolio</a>
