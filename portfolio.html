@@ -1,212 +1,201 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
 
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background-color: #fff;
-            padding: 20px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
+<title>SOHEB_.X | Portfolio</title>
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #e63946; 
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        nav a {
-            text-decoration: none;
-            color: #555;
-            margin-left: 20px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Playfair+Display:wght@500&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 
-        nav a:hover, nav a.active {
-            color: #e63946;
-        }
+<style>
 
-        .portfolio-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+html{
+scroll-behavior:smooth;
+}
 
-        .section-title h1 {
-            font-size: 36px;
-            color: #222;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
+body{
 
-        .section-title h1::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: #e63946;
-        }
+background:#090909;
+color:#fff;
+font-family:'Montserrat',sans-serif;
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+}
 
-        .portfolio-item {
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+header{
 
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
+position:fixed;
 
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background-color: #ffe3e3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #e63946;
-            font-weight: bold;
-            font-size: 18px;
-            border-bottom: 3px solid #e63946;
-        }
+top:0;
+left:0;
 
-        .project-info {
-            padding: 20px;
-        }
+width:100%;
 
-        .project-info h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #222;
-        }
+padding:24px 8%;
 
-        .project-info p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-        }
+display:flex;
 
-        .tags {
-            display: flex;
-            gap: 5px;
-            flex-wrap: wrap;
-        }
+justify-content:space-between;
+align-items:center;
 
-        .tag {
-            background: #ffe3e3;
-            color: #e63946;
-            font-size: 12px;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-weight: 500;
-        }
+background:rgba(9,9,9,.85);
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-            background-color: #222;
-            color: #fff;
-            font-size: 14px;
-        }
-    </style>
+backdrop-filter:blur(18px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(212,175,55,.15);
+
+}
+
+.logo{
+
+font-size:32px;
+
+letter-spacing:6px;
+
+font-weight:600;
+
+color:#D4AF37;
+
+text-decoration:none;
+
+}
+
+nav{
+
+display:flex;
+gap:38px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#d9d9d9;
+
+font-size:14px;
+
+letter-spacing:2px;
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:#D4AF37;
+
+}
+
+.active{
+
+color:#D4AF37;
+
+}
+
+.contact-btn{
+
+padding:13px 28px;
+
+border:1px solid #D4AF37;
+
+border-radius:40px;
+
+color:#D4AF37;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.contact-btn:hover{
+
+background:#D4AF37;
+
+color:#000;
+
+box-shadow:0 0 20px rgba(212,175,55,.35);
+
+}
+
+@media(max-width:900px){
+
+nav{
+
+display:none;
+
+}
+
+.logo{
+
+font-size:26px;
+
+letter-spacing:4px;
+
+}
+
+.contact-btn{
+
+padding:10px 18px;
+
+font-size:13px;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">My Work.</div>
-        <nav>
-            <a href="index.html">Home</a> 
-            <a href="#" class="active">Portfolio</a>
-        </nav>
-    </header>
+<header>
 
-    <div class="portfolio-container">
-        <div class="section-title">
-            <h1>My Creative Work</h1>
-        </div>
+<a href="index.html" class="logo">
+SOHEB_.X
+</a>
 
-        <div class="portfolio-grid">
-            
-            <div class="portfolio-item">
-                <div class="project-image">Project One [Image Here]</div>
-                <div class="project-info">
-                    <h3>Creative Design Project</h3>
-                    <p>Ekhane apnar prothom project-er description thakbe.</p>
-                    <div class="tags">
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">Artwork</span>
-                    </div>
-                </div>
-            </div>
+<nav>
 
-            <div class="portfolio-item">
-                <div class="project-image">Project Two [Image Here]</div>
-                <div class="project-info">
-                    <h3>Photography & Art</h3>
-                    <p>Apnar ditiyo kono bhalo kaj ba digital art er details ekhane thakbe.</p>
-                    <div class="tags">
-                        <span class="tag">Editing</span>
-                        <span class="tag">Ghibli Style</span>
-                    </div>
-                </div>
-            </div>
+<a href="index.html">
+HOME
+</a>
 
-            <div class="portfolio-item">
-                <div class="project-image">Project Three [Image Here]</div>
-                <div class="project-info">
-                    <h3>Web Development</h3>
-                    <p>Kono website ba web application er kaj thakle seta ekhane thakbe.</p>
-                    <div class="tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">Responsive</span>
-                    </div>
-                </div>
-            </div>
+<a class="active">
+PORTFOLIO
+</a>
 
-        </div>
-    </div>
+<a href="#">
+ABOUT
+</a>
 
-    <footer>
-        <p>&copy; 2026 | Created by Me</p>
-    </footer>
+<a href="#">
+SERVICES
+</a>
 
-</body>
-</html>
+<a href="#">
+CONTACT
+</a>
+
+</nav>
+
+<a href="#" class="contact-btn">
+LET'S TALK
+</a>
+
+</header>
