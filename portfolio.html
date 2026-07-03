@@ -15,6 +15,12 @@
 
 <style>
 
+@font-face{
+font-family:'Chopsic';
+src:url('Chopsic.otf') format('opentype');
+}
+
+
 *{
 margin:0;
 padding:0;
@@ -60,6 +66,8 @@ border-bottom:1px solid rgba(212,175,55,.15);
 }
 
 .logo{
+font-family:'Chopsic',sans-serif;
+
 
 font-size:32px;
 
@@ -170,6 +178,14 @@ font-size:13px;
 .hero-btn:hover{background:#D4AF37;color:#000;}
 @media(max-width:900px){.hero h1{font-size:48px;letter-spacing:6px}.hero h2{font-size:28px}}
 
+
+.luxury-divider{display:flex;align-items:center;justify-content:center;gap:18px;margin:18px 0 28px;color:#D4AF37;font-size:16px}
+.luxury-divider span{display:block;width:90px;height:1px;background:#D4AF37;opacity:.45}
+.hero h1{color:#fff;text-shadow:0 0 8px rgba(212,175,55,.12),0 0 18px rgba(212,175,55,.08),0 0 30px rgba(212,175,55,.05);}
+.hero-btn{position:relative;overflow:hidden}
+.hero-btn::before{content:'';position:absolute;top:0;left:-120%;width:70%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transition:.7s}
+.hero-btn:hover::before{left:130%}
+.hero-btn:hover{transform:translateY(-2px);box-shadow:0 0 25px rgba(212,175,55,.35);}
 </style>
 
 </head>
