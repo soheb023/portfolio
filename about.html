@@ -12,7 +12,23 @@ header{position:fixed;top:0;left:0;width:100%;padding:22px 8%;display:flex;justi
 .logo{font-family:Chopsic,sans-serif;font-size:32px;letter-spacing:6px;color:#D4AF37;text-decoration:none}
 nav{display:flex;gap:28px}
 nav a{color:#ddd;text-decoration:none}.active{color:#D4AF37}
-.btn{display:flex;align-items:center;justify-content:center;padding:12px 28px;border:1px solid #D4AF37;border-radius:40px;color:#D4AF37;text-decoration:none;font-weight:600}
+.btn{display:flex;align-items:center;justify-content:center;
+padding:12px 30px;
+border:1px solid #D4AF37;
+border-radius:40px;
+background:#D4AF37;
+color:#090909;
+text-decoration:none;
+font-weight:700;
+transition:.35s;
+box-shadow:0 0 14px rgba(212,175,55,.28);
+position:relative;
+overflow:hidden}
+.btn:before{content:'';position:absolute;left:-120%;top:0;width:60%;height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+transition:.7s}
+.btn:hover:before{left:140%}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 24px rgba(212,175,55,.45)}
 .hero{min-height:100vh;padding:140px 8% 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
 .tag{color:#D4AF37;letter-spacing:5px}
 h1{font-family:Chopsic,sans-serif;color:#D4AF37;font-size:64px;margin:15px 0}
