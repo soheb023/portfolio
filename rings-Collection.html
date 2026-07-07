@@ -3,69 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rings Collection | SOHEB_.X</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>RINGS | SOHEB_.X</title>
     <style>
-        :root { --bg: #070707; --gold: #D4AF37; --text: #ffffff; --card-bg: #111111; --border: #222222; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        :root { 
+            --bg: #070707; 
+            --gold: #D4AF37; 
+            --text: #ffffff; 
+            --card-bg: rgba(14, 14, 14, 0.85); 
+            --border: #1a1a1a; 
+        }
+        
+        body { 
+            background-color: var(--bg); 
+            /* এখানে আপনার সিল্কের ইমেজ ফাইলটি বসাবেন */
+            background-image: url('silk-texture.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            color: var(--text); 
+            font-family: 'Cinzel', serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
 
-        /* Header Section */
+        /* Back Button Style */
+        .back-btn { padding: 20px 0; display: inline-block; }
+        .back-btn a { color: var(--gold); text-decoration: none; font-family: sans-serif; font-size: 14px; letter-spacing: 1px; }
+
         header { text-align: center; margin-bottom: 60px; }
-        .title { font-family: 'Cinzel', serif; font-size: 80px; color: var(--gold); letter-spacing: 5px; margin-bottom: 10px; }
-        .subtitle { color: var(--gold); letter-spacing: 2px; font-size: 14px; text-transform: uppercase; }
+        .title { font-size: 80px; color: var(--gold); margin-bottom: 10px; }
+        .subtitle { font-size: 14px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; }
 
-        /* Grid Section */
-        .ring-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .card { background: var(--card-bg); border: 1px solid var(--border); padding: 25px; position: relative; transition: 0.3s; }
-        .card:hover { border-color: var(--gold); }
-        .card-number { color: var(--text); font-size: 16px; margin-bottom: 15px; }
-        .card img { width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; }
-        .card h3 { color: var(--text); font-family: 'Cinzel', serif; margin: 0; }
-        .card p { color: var(--gold); font-size: 12px; margin-top: 5px; letter-spacing: 1px; }
+        /* 3x3 Grid Layout */
+        .ring-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+        }
+        
+        .card { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border); 
+            padding: 25px; 
+            position: relative; 
+            transition: 0.4s; 
+            cursor: pointer;
+        }
+        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        
+        /* 1:1 Aspect Ratio Image Wrapper */
+        .card-img-wrapper {
+            width: 100%;
+            padding-top: 100%; 
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .card-img-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-num { color: var(--text); font-size: 14px; margin-bottom: 15px; }
         .arrow { position: absolute; top: 25px; right: 25px; color: var(--gold); }
-
-        /* Pagination */
-        .pagination { text-align: center; margin-top: 40px; }
-        .pagination a { color: var(--text); padding: 10px 15px; border: 1px solid var(--border); text-decoration: none; margin: 0 5px; }
+        .card h3 { color: var(--text); font-size: 18px; margin: 0; }
+        .card p { color: var(--gold); font-size: 11px; margin-top: 5px; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <!-- Back Navigation -->
+    <div class="back-btn">
+        <a href="gallery.html">← BACK TO GALLERY</a>
+    </div>
+
     <header>
-        <div class="subtitle">EXPLORE OUR COLLECTION OF</div>
+        <div class="subtitle">Explore our collection of</div>
         <div class="title">RINGS</div>
-        <div class="subtitle">HANDCRAFTED CAD DESIGNS</div>
+        <div class="subtitle">Handcrafted CAD designs</div>
     </header>
 
     <div class="ring-grid">
-        <!-- কার্ড ১ -->
-        <div class="card">
-            <div class="card-number">01 <span class="arrow">↗️</span></div>
-            <img src="ring1.jpg" alt="Solitaire Grace">
-            <h3>Solitaire Grace</h3>
-            <p>18K YELLOW GOLD</p>
-        </div>
-        <!-- কার্ড ২ -->
-        <div class="card">
-            <div class="card-number">02 <span class="arrow">↗️</span></div>
-            <img src="ring2.jpg" alt="Halo Radiance">
-            <h3>Halo Radiance</h3>
-            <p>18K ROSE GOLD</p>
-        </div>
-        <!-- কার্ড ৩ -->
-        <div class="card">
-            <div class="card-number">03 <span class="arrow">↗️</span></div>
-            <img src="ring3.jpg" alt="Regal Vision">
-            <h3>Regal Vision</h3>
-            <p>18K YELLOW GOLD</p>
-        </div>
-        <!-- এভাবে আরও কার্ড যোগ করুন -->
-    </div>
-
-    <div class="pagination">
-        <a href="#">←</a><a href="#">1</a><a href="#">2</a><span>...</span><a href="#">5</a><a href="#">→</a>
+        <!-- 3x3 Grid (9 Cards) -->
+        <div class="card"><div class="card-num">01 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring1.jpg"></div><h3>Solitaire Grace</h3><p>18K YELLOW GOLD</p></div>
+        <div class="card"><div class="card-num">02 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring2.jpg"></div><h3>Halo Radiance</h3><p>18K ROSE GOLD</p></div>
+        <div class="card"><div class="card-num">03 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring3.jpg"></div><h3>Regal Vision</h3><p>18K YELLOW GOLD</p></div>
+        <div class="card"><div class="card-num">04 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring4.jpg"></div><h3>Twist of Love</h3><p>18K YELLOW GOLD</p></div>
+        <div class="card"><div class="card-num">05 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring5.jpg"></div><h3>Emerald Classico</h3><p>18K WHITE GOLD</p></div>
+        <div class="card"><div class="card-num">06 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring6.jpg"></div><h3>Blush Elegance</h3><p>18K ROSE GOLD</p></div>
+        <div class="card"><div class="card-num">07 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring7.jpg"></div><h3>Eternity Band</h3><p>18K WHITE GOLD</p></div>
+        <div class="card"><div class="card-num">08 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring8.jpg"></div><h3>Onyx Majesty</h3><p>18K YELLOW GOLD</p></div>
+        <div class="card"><div class="card-num">09 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring9.jpg"></div><h3>Infinity Spark</h3><p>18K WHITE GOLD</p></div>
     </div>
 </div>
 
