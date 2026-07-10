@@ -6,33 +6,57 @@
     <title>Solitaire Grace | SOHEB_.X</title>
     <style>
         @font-face{ font-family:'Chopsic'; src:url('Chopsic.otf') format('opentype'); }
-        body { background: #070707; color: #fff; font-family: 'Montserrat', sans-serif; margin: 0; }
-        .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
+        
+        body { 
+            background: url('ring1dpbg.png') no-repeat center center fixed; 
+            background-size: cover;
+            color: #fff; 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+        }
+        
+        .container { max-width: 1200px; margin: auto; padding: 40px 20px; background: rgba(0,0,0,0.7); min-height: 100vh; }
         
         /* Top Branding */
         .brand-top { font-family: 'Chopsic'; font-size: 24px; color: #D4AF37; margin-bottom: 30px; letter-spacing: 4px; }
         
         /* Main Layout */
         .details-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 80px; }
-        .main-img { width: 100%; border: 1px solid #1a1a1a; }
+        .main-img { width: 100%; border-radius: 20px; border: 1px solid #D4AF37; cursor: pointer; transition: 0.3s; }
+        .main-img:hover { transform: scale(1.02); box-shadow: 0 0 20px #D4AF37; }
+        
         .info h1 { font-size: 48px; color: #D4AF37; margin-bottom: 10px; }
         .gold-line { width: 80px; height: 1px; background: #D4AF37; margin: 20px 0; }
         
-        /* Buttons */
-        .btn { display: inline-block; padding: 15px 30px; border: 1px solid #D4AF37; color: #D4AF37; text-decoration: none; margin-top: 20px; transition: 0.3s; }
-        .btn:hover { background: #D4AF37; color: #000; }
+        /* Smooth Request Button with Hover Effect */
+        .btn { 
+            display: inline-block; 
+            padding: 15px 30px; 
+            border: 1px solid #D4AF37; 
+            color: #D4AF37; 
+            text-decoration: none; 
+            margin-top: 20px; 
+            border-radius: 30px; /* স্মুথ কর্নার */
+            transition: all 0.4s ease; 
+        }
+        .btn:hover { 
+            background: #D4AF37; 
+            color: #000; 
+            box-shadow: 0 0 20px #D4AF37; /* গ্লো ইফেক্ট */
+            transform: translateY(-3px); /* হালকা উপরে উঠবে */
+        }
 
-        /* CAD Grid */
+        /* Grid System with Smooth Corners & Glow */
         .cad-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px; }
-        .cad-box { border: 1px solid #1a1a1a; padding: 15px; text-align: center; color: #888; font-size: 12px; }
+        .cad-box { border: 1px solid #333; padding: 15px; text-align: center; border-radius: 15px; background: rgba(255,255,255,0.05); }
+        .cad-box img { width: 100%; border-radius: 12px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .cad-box img:hover { transform: scale(1.05); box-shadow: 0 0 15px #D4AF37; }
 
-        /* Stats Grid */
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px; }
-        .stat-card { border: 1px solid #1a1a1a; padding: 20px; text-align: center; }
+        .stat-card { border: 1px solid #333; padding: 20px; text-align: center; border-radius: 15px; background: rgba(255,255,255,0.05); }
         .stat-card h4 { color: #D4AF37; margin-bottom: 5px; font-size: 12px; }
 
-        /* Footer */
-        .footer-brand { font-family: 'Chopsic'; font-size: 28px; color: #D4AF37; margin-top: 80px; padding-top: 40px; border-top: 1px solid #1a1a1a; }
+        .footer-brand { font-family: 'Chopsic'; font-size: 28px; color: #D4AF37; margin-top: 80px; padding-top: 40px; border-top: 1px solid #333; text-align: center; }
     </style>
 </head>
 <body>
@@ -41,17 +65,16 @@
     <div class="brand-top"><a href="ring.html" style="text-decoration: none; color: inherit;">SOHEB_.X</a></div>
     
     <div class="details-wrapper">
-        <img src="ring1-large.jpg" class="main-img" alt="Solitaire Grace">
+        <img src="ring1-large.jpg" class="main-img" alt="Solitaire Grace" onclick="openLightbox(this.src)">
         <div class="info">
             <h1>SOLITAIRE GRACE</h1>
             <p>18K YELLOW GOLD</p>
             <div class="gold-line"></div>
-            <p>A timeless solitaire ring that defines elegance and sophistication. The perfect blend of brilliance and craftsmanship.</p>
+            <p>A timeless solitaire ring that defines elegance and sophistication.</p>
             <a href="https://wa.me/919883452853?text=I am interested in Solitaire Grace ring" target="_blank" class="btn">REQUEST THIS DESIGN</a>
         </div>
     </div>
 
-    <!-- Ring Details -->
     <h3 style="margin-bottom:30px;">RING DETAILS</h3>
     <div class="stats-grid">
         <div class="stat-card"><h4>RING SIZE</h4><p>US 7.00</p></div>
@@ -60,26 +83,36 @@
         <div class="stat-card"><h4>SETTING TYPE</h4><p>PRONG SET</p></div>
     </div>
 
-    <!-- Render Views -->
     <h3 style="color:#D4AF37; margin-bottom:30px;">RENDER VIEWS</h3>
     <div class="cad-grid">
-        <div class="cad-box"><img src="render1.jpg" style="width:100%"><p>FRONT</p></div>
-        <div class="cad-box"><img src="render2.jpg" style="width:100%"><p>BACK</p></div>
-        <div class="cad-box"><img src="render3.jpg" style="width:100%"><p>SIDE</p></div>
-        <div class="cad-box"><img src="render4.jpg" style="width:100%"><p>PERSPECTIVE</p></div>
+        <div class="cad-box"><img src="render1.jpg" onclick="openLightbox(this.src)"><p>FRONT</p></div>
+        <div class="cad-box"><img src="render2.jpg" onclick="openLightbox(this.src)"><p>BACK</p></div>
+        <div class="cad-box"><img src="render3.jpg" onclick="openLightbox(this.src)"><p>SIDE</p></div>
+        <div class="cad-box"><img src="render4.jpg" onclick="openLightbox(this.src)"><p>PERSPECTIVE</p></div>
     </div>
 
-    <!-- Matrix/CAD Views -->
     <h3 style="color:#D4AF37; margin-bottom:30px;">MATRIX (CAD) VIEWS</h3>
     <div class="cad-grid">
-        <div class="cad-box"><img src="matrix1.jpg" style="width:100%"><p>TOP</p></div>
-        <div class="cad-box"><img src="matrix2.jpg" style="width:100%"><p>FRONT</p></div>
-        <div class="cad-box"><img src="matrix3.jpg" style="width:100%"><p>SIDE</p></div>
-        <div class="cad-box"><img src="matrix4.jpg" style="width:100%"><p>PERSPECTIVE</p></div>
+        <div class="cad-box"><img src="matrix1.jpg" onclick="openLightbox(this.src)"><p>TOP</p></div>
+        <div class="cad-box"><img src="matrix2.jpg" onclick="openLightbox(this.src)"><p>FRONT</p></div>
+        <div class="cad-box"><img src="matrix3.jpg" onclick="openLightbox(this.src)"><p>SIDE</p></div>
+        <div class="cad-box"><img src="matrix4.jpg" onclick="openLightbox(this.src)"><p>PERSPECTIVE</p></div>
     </div>
 
     <div class="footer-brand">SOHEB_.X</div>
 </div>
+
+<!-- Lightbox -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;" onclick="this.style.display='none'">
+    <img id="lightbox-img" style="max-width:90%; max-height:80%; border-radius:15px; border:2px solid #D4AF37;">
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+</script>
 
 </body>
 </html>
