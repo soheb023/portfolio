@@ -9,73 +9,41 @@
             --bg: #070707; 
             --gold: #D4AF37; 
             --text: #ffffff; 
-            --card-bg: rgba(14, 14, 14, 0.85); 
+            --card-bg: rgba(14, 14, 14, 0.7); 
             --border: #1a1a1a; 
         }
         
-        body { 
-            background-color: var(--bg); 
-            color: var(--text); 
-            font-family: 'Cinzel', serif; 
-            margin: 0; 
-            padding: 0; 
-            overflow-x: hidden;
-        }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Cinzel', serif; margin: 0; padding: 0; overflow-x: hidden; }
 
-        /* ভিডিও ব্যাকগ্রাউন্ড স্টাইল */
-        .video-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
+        .video-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
         
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 1; }
 
-        /* Back Button Style */
+        /* 'Let's Talk' style Back Button */
         .back-btn { padding: 20px 0; display: inline-block; }
-        .back-btn a { color: var(--gold); text-decoration: none; font-family: sans-serif; font-size: 14px; letter-spacing: 1px; }
+        .back-btn a { 
+            color: var(--gold); text-decoration: none; font-family: sans-serif; font-size: 12px; letter-spacing: 2px;
+            border: 1px solid var(--gold); padding: 10px 20px; border-radius: 30px; transition: 0.4s;
+        }
+        .back-btn a:hover { background: var(--gold); color: #000; box-shadow: 0 0 15px var(--gold); }
 
         header { text-align: center; margin-bottom: 60px; }
         .title { font-size: 80px; color: var(--gold); margin-bottom: 10px; }
         .subtitle { font-size: 14px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; }
 
         /* 3x3 Grid Layout */
-        .ring-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 20px; 
-        }
+        .ring-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
         
-        /* কার্ড লিঙ্ক এবং স্টাইল */
         .card-link { text-decoration: none; display: block; }
         .card { 
-            background: var(--card-bg); 
-            border: 1px solid var(--border); 
-            padding: 25px; 
-            position: relative; 
-            transition: 0.4s; 
+            background: var(--card-bg); border: 1px solid var(--border); padding: 20px; 
+            position: relative; transition: 0.4s; border-radius: 25px; /* স্মুথ কর্নার */
         }
-        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3); }
         
-        .card-img-wrapper {
-            width: 100%;
-            padding-top: 100%; 
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-        .card-img-wrapper img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .card-img-wrapper { width: 100%; padding-top: 100%; position: relative; overflow: hidden; margin-bottom: 20px; border-radius: 15px; /* ইমেজের কর্নার স্মুথ */ }
+        .card-img-wrapper img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .card:hover .card-img-wrapper img { transform: scale(1.1); }
 
         .card-num { color: var(--text); font-size: 14px; margin-bottom: 15px; }
         .arrow { position: absolute; top: 25px; right: 25px; color: var(--gold); }
@@ -85,7 +53,6 @@
 </head>
 <body>
 
-<!-- ভিডিও ব্যাকগ্রাউন্ড (আপনার ভিডিও ফাইলের নাম silk-video.mp4 নিশ্চিত করুন) -->
 <video autoplay muted loop playsinline class="video-bg">
     <source src="silk-video.mp4" type="video/mp4">
 </video>
@@ -102,7 +69,7 @@
     </header>
 
     <div class="ring-grid">
-        <!-- প্রতিটি কার্ড এখন নির্দিষ্ট details পেজে লিঙ্ক করা -->
+        <!-- কার্ডগুলোতে স্মুথ কর্নার এবং হোভার ইফেক্ট যুক্ত -->
         <a href="ring1details.html" class="card-link"><div class="card"><div class="card-num">01 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring1.jpg"></div><h3>Solitaire Grace</h3><p>18K YELLOW GOLD</p></div></a>
         <a href="ring2details.html" class="card-link"><div class="card"><div class="card-num">02 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring2.jpg"></div><h3>Halo Radiance</h3><p>18K ROSE GOLD</p></div></a>
         <a href="ring3details.html" class="card-link"><div class="card"><div class="card-num">03 <span class="arrow">↗</span></div><div class="card-img-wrapper"><img src="ring3.jpg"></div><h3>Regal Vision</h3><p>18K YELLOW GOLD</p></div></a>
