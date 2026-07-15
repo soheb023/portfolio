@@ -63,8 +63,15 @@
         .card:hover::before{ opacity:1; }
         .card h3{ position:absolute; top:18px; left:20px; color:#D4AF37; font-size:20px; z-index:2; margin:0; }
         
-        /* Image styling inside card */
-        .card img { width:100%; height:100%; object-fit:cover; transition: .4s; opacity: 0.8; }
+        /* Image styling updated for 1:1 ratio */
+        .card img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; 
+            background-color: #090909; 
+            transition: .4s; 
+            opacity: 0.8; 
+        }
         .card:hover img { opacity: 1; transform: scale(1.05); }
 
         @media(max-width:900px){
@@ -105,11 +112,11 @@
         
         <div class="grid">
             <a class="card" href="ring.html"><img src="gpring.jpeg" alt="Ring"><h3>Ring</h3></a>
-            <a class="card" href="signet-ring.html"><img src="gpsignetring.jpg" alt="Signet Ring"><h3>Signet Ring</h3></a>
-            <a class="card" href="stone-ring.html"><img src="gpstonering.jpg" alt="Stone Ring"><h3>Stone Ring</h3></a>
-            <a class="card" href="pendant.html"><img src="gppendant.jpg" alt="Pendant"><h3>Pendant</h3></a>
-            <a class="card" href="bracelet.html"><img src="gpbracelet.jpg" alt="Bracelet"><h3>Bracelet</h3></a>
-            <a class="card" href="earring.html"><img src="gpearring.jpg" alt="Earring"><h3>Earring</h3></a>
+            <a class="card" href="signet-ring.html"><img src="gpsignetring.jpeg" alt="Signet Ring"><h3>Signet Ring</h3></a>
+            <a class="card" href="stone-ring.html"><img src="gpstonering.jpeg" alt="Stone Ring"><h3>Stone Ring</h3></a>
+            <a class="card" href="pendant.html"><img src="gppendant.jpeg" alt="Pendant"><h3>Pendant</h3></a>
+            <a class="card" href="bracelet.html"><img src="gpbracelet.jpeg" alt="Bracelet"><h3>Bracelet</h3></a>
+            <a class="card" href="earring.html"><img src="gpearring.jpeg" alt="Earring"><h3>Earring</h3></a>
         </div>
     </section>
 </body>
