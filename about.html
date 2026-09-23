@@ -38,13 +38,15 @@
             width: 100%;
             background: linear-gradient(90deg, rgba(9,9,9,0.92) 0%, rgba(9,9,9,0.75) 50%, rgba(9,9,9,0.3) 100%), url("about-bg.jpg") no-repeat center center/cover;
             display: flex;
-            align-items: center;
-            padding: 120px 8% 80px;
+            flex-direction: column;
+            justify-content: center;
+            padding: 160px 8% 80px;
         }
 
         .about-content {
             max-width: 650px;
             z-index: 2;
+            margin-bottom: 80px;
         }
 
         .about-subtitle-box {
@@ -90,7 +92,7 @@
             font-size: 15px;
             line-height: 1.8;
             color: #cccccc;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
             font-weight: 400;
         }
 
@@ -101,6 +103,58 @@
             color: #D4AF37;
             letter-spacing: 2px;
         }
+
+        /* CONTACT & SOCIAL FOOTER BAR INSIDE ABOUT */
+        .about-footer-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-top: 40px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 2;
+        }
+
+        .quick-contacts {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .q-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #d9d9d9;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .q-contact-item i {
+            color: #D4AF37;
+            font-size: 18px;
+        }
+
+        .q-contact-item:hover {
+            color: #D4AF37;
+        }
+
+        .social-links { display: flex; gap: 15px; }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #D4AF37;
+            text-decoration: none;
+            transition: 0.3s;
+            background: rgba(0,0,0,0.4);
+        }
+        .social-links a:hover { background: #D4AF37; color: #000; border-color: #D4AF37; }
 
         /* RESPONSIVE */
         @media(max-width: 992px){
@@ -113,6 +167,8 @@
             .about-content { max-width: 100%; }
             .about-subtitle-box { justify-content: center; }
             .about-title { font-size: 44px; }
+            .about-footer-info { flex-direction: column; gap: 25px; align-items: center; }
+            .quick-contacts { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
@@ -130,7 +186,7 @@
             <a href="about.html" class="active">ABOUT</a>
             <a href="services.html">SERVICES</a>
             <a href="contact.html">CONTACT</a>
-        </nav>
+        </main>
         <a href="contact.html" class="contact-btn">LET'S TALK <i class="fa-solid fa-arrow-right"></i></a>
     </header>
 
@@ -150,6 +206,30 @@
             </p>
             
             <div class="signature">Soheb_.X</div>
+        </div>
+
+        <!-- QUICK CONTACT & SOCIALS BAR -->
+        <div class="about-footer-info">
+            <div class="quick-contacts">
+                <a href="tel:+919876543210" class="q-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 98765 43210</span>
+                </a>
+                <a href="https://wa.me/919876543210" target="_blank" class="q-contact-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>WhatsApp Chat</span>
+                </a>
+                <a href="mailto:soheb.xjewelry@gmail.com" class="q-contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>soheb.xjewelry@gmail.com</span>
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-behance"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </div>
     </section>
 
